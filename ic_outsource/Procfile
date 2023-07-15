@@ -1,1 +1,1 @@
-web: gunicorn ic_outsourcel.wsgi --log-file -
+web: gunicorn ic_outsource.wsgi --log-file -
