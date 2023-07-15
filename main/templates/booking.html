@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+    <head>
+          <meta charset="utf-8">
+          {%load static%}
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <title>Booking</title>
+          <meta name="description" content="">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="{%static 'booking.css'%}">
+          
+    </head>
+    <body >
+      <header><img class="logo" src="{%static "logo_final_r.png" %}" alt="logo"></header>
+      <h2 class="mid-message" >Book Your Discovery Call</h2>
+        <div class="formbold-main-wrapper">
+            <div class="formbold-form-wrapper">
+              <form action="" method="POST">{% csrf_token %}
+                <!---action="https://formbold.com/s/67WRR" -->
+                <div class="formbold-mb-5">
+                  <label for="name" class="formbold-form-label"> Full Name </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Full Name"
+                    class="formbold-form-input"
+                  />
+                </div>
+                <div class="formbold-mb-5">
+                  <label for="phone" class="formbold-form-label"> Phone Number </label>
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    class="formbold-form-input"
+                  />
+                </div>
+                <div class="formbold-mb-5">
+                  <label for="email" class="formbold-form-label"> Email Address </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    class="formbold-form-input"
+                  />
+                </div>
+                <div class="flex flex-wrap formbold--mx-3">
+                  <div class="w-full sm:w-half formbold-px-3">
+                    <div class="formbold-mb-5 w-full">
+                      <label for="date" class="formbold-form-label"> Date </label>
+                      <input
+                        type="date"
+                        name="date"
+                        id="date"
+                        class="formbold-form-input"
+                      />
+                    </div>
+                  </div>
+                  <div class="w-full sm:w-half formbold-px-3">
+                    <div class="formbold-mb-5">
+                      <label for="time" class="formbold-form-label"> Time </label>
+                      <input
+                        type="time"
+                        name="time"
+                        id="time"
+                        class="formbold-form-input"
+                      />
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="formbold-mb-5 formbold-pt-3">
+                  <label class="formbold-form-label formbold-form-label-2">
+                    Address Details
+                  </label>
+                  <div class="flex flex-wrap formbold--mx-3">
+                    
+                    
+                    <div class="w-full sm:w-half formbold-px-3">
+                      <div class="formbold-mb-5" style=" padding-bottom: 5%;">
+                        <input
+                          type="text"
+                          name="city"
+                          id="city"
+                          placeholder="Enter city"
+                          class="formbold-form-input"
+                        />
+                      </div>
+                    </div>
+                    <div class="w-full sm:w-half formbold-px-3">
+                      <div class="formbold-mb-5" style=" padding-bottom: 5%;">
+                        <input
+                          type="text"
+                          name="state"
+                          id="state"
+                          placeholder="Enter state"
+                          class="formbold-form-input"
+                        />
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="bottom questions" style="display: inline;">
+                    <label class="formbold-form-label formbold-form-label-2">
+                      How old are you:
+                    </label>
+                    <label class="formbold-form-label formbold-form-label-2" style="padding-left: 30%; padding-bottom: 5%;">
+                      Your Instagram Handler:
+                    </label>
+                   </div>
+                  
+                  <div class="flex flex-wrap formbold--mx-3">
+                    
+                    
+                    <div class="w-full sm:w-half formbold-px-3">
+                      <div class="formbold-mb-5" style="padding-top: 5%;">
+                        <input
+                          type="text"
+                          name="age"
+                          id="age"
+                          placeholder="Enter age"
+                          class="formbold-form-input"
+                        />
+                      </div>
+                    </div>
+                    <div class="w-full sm:w-half formbold-px-3">
+                      <div class="formbold-mb-5" style="padding-top: 5%;">
+                        <input
+                          type="text"
+                          name="insta_handler"
+                          id="insta_handler"
+                          placeholder="UserName"
+                          class="formbold-form-input"
+                        />
+                      </div>
+                    </div>
+                    <label for="money" class="formbold-form-label formbold-form-label-2" 
+                    style="padding-top: 4%;
+                     padding-left: 2%;">How much are you making monthly from your agency?</label>
+                      <div class="w-full sm:w-half formbold-px-3">
+                        <div class="formbold-mb-5" >
+                            <select id="how_much_per_month" name="how_much_per_month" >
+                              <option value="zero" >$0 - Considering or Just Starting</option>
+                              <option value="500" >Less Than $500</option>
+                              <option value="1k">$500 - $1k/month</option>
+                              <option value="5k">$1k - $5k/month</option>
+                              <option value="10k">$5k - $10k/month</option>
+                              <option value="10kplus">$10k+ /month</option>
+                            </select>
+                        </div>
+                      </div>
+                      <label class="formbold-form-label formbold-form-label-2" style="padding-left: 2%; padding-top: 4%;">
+                        How much do you want to be making monthly from your agency (In 12 months?):
+                      </label>
+                      
+                  </div>
+                  <div class="formbold-mb-5">
+                    <label for="name" class="formbold-form-label"> </label>
+                    <input
+                      type="text"
+                      name="how_much_wish"
+                      id="how_much_wish"
+                      placeholder=" "
+                      class="formbold-form-input"
+                    />
+                  </div>
+                  <label class="formbold-form-label formbold-form-label-2" >
+                    What do you feel is your biggest obstacle to hitting your monthly agency revenue goal?
+                  </label>
+                  
+                </div>
+
+                <div class="formbold-mb-5">
+                  <label for="name" class="formbold-form-label" > </label>
+                  <input 
+                    type="text"
+                    name="obstacle"
+                    id="obstacle"
+                    placeholder=" "
+                    class="formbold-form-input"
+                  />
+                </div>
+                <label class="formbold-form-label formbold-form-label-2">
+                  If accepted into Agency Navigator - how willing and able are you to invest in yourself today?
+                </label>
+                <p style="color: white;">dassaddsaaaa,,,,,,</p>
+                <div class="flex flex-wrap formbold--mx-3">
+                <div class="w-full sm:w-half formbold-px-3">
+                  <div class="formbold-mb-5" >
+                      <select id="how_much_invest" name="how_much_invest" >
+                        <option value="zero" >I have access to more than $1000 USD to invest into myself.</option>
+                        <option value="500" >I have access to $500-$1000 USD to invest into myself.</option>
+                        <option value="1k">I have access to less than $500 USD to invest into myself.</option>
+                        <option value="5k">I have no financial resources at all to invest into myself.</option>
+                        
+                      </select>
+                  </div>
+                </div>
+                </div>
+          
+                <div>
+                  <!--<input type="submit" value="Book A Call" href="main.html">-->
+                  <a class="cta" href="main.html"><button>Book a Discovery Call</button></a>
+                </div>
+              </form>
+            </div>
+          </div>
+         
+    </body>
+</html>
