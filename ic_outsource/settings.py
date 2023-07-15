@@ -132,7 +132,10 @@ STATICFILES_DIRS=[
 
 MIDDLEWARE = [
     # ...
+    "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    'django.contrib.messages.middleware.MessageMiddleware',
     # ...
 ]
